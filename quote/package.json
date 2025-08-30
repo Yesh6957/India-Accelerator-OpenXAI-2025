@@ -1,0 +1,15 @@
+{
+  "name": "quote-generator",
+  "version": "1.0.0",
+  "description": "Quote of the Day Generator using OpenAI API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "openai": "^4.28.4"
+  }
+}
