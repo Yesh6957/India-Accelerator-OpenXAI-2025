@@ -5,7 +5,11 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // ✅ Express app
 const app = express();
-app.use(express.static(path.join(__dirname, "public")));
+
+// 👉 Serve index.html from the main folder instead of /public
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
 
 // ✅ Gemini client
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
